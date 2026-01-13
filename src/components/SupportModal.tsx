@@ -8,6 +8,10 @@ interface SupportModalProps {
 export const SupportModal = ({ isOpen, onClose }: SupportModalProps) => {
   if (!isOpen) return null;
 
+  // TODO: Re-enable after AdSense approval
+  const ADSENSE_APPROVED = false;
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleEnableAds = () => {
     localStorage.setItem('task_roulette_ads_enabled', 'true');
     // Clear any existing dismissal for current session
@@ -55,6 +59,26 @@ export const SupportModal = ({ isOpen, onClose }: SupportModalProps) => {
 
         {/* Action buttons */}
         <div className="space-y-4">
+          {/* Enable Ads button - Hidden until AdSense approval */}
+          {ADSENSE_APPROVED && (
+            <div className="text-center">
+              <button
+                onClick={handleEnableAds}
+                className="w-full px-6 py-3 rounded-xl font-medium transition-all duration-200 mb-2 hover:scale-105"
+                style={{
+                  backgroundColor: '#007AFF',
+                  color: '#ffffff',
+                  boxShadow: '0 4px 12px rgba(0, 122, 255, 0.3)'
+                }}
+              >
+                Enable Ads
+              </button>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Support Task Roulette with tasteful, non-intrusive banner ads that don't interfere with your practice.
+              </p>
+            </div>
+          )}
+
           {/* Donate button */}
           <div className="text-center">
             <button

@@ -5,8 +5,14 @@ interface AdBannerProps {
 }
 
 export const AdBanner = ({ className = '' }: AdBannerProps) => {
+  // TODO: Change to true after AdSense approval
+  const ADSENSE_APPROVED = false;
+
   const [adsEnabled] = useState(() => {
-    // Hide ads until AdSense approval - always return false for now
+    if (!ADSENSE_APPROVED) return false;
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('task_roulette_ads_enabled') === 'true';
+    }
     return false;
   });
 
