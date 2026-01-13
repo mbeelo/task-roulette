@@ -6,9 +6,7 @@ interface AdBannerProps {
 
 export const AdBanner = ({ className = '' }: AdBannerProps) => {
   const [adsEnabled] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('task_roulette_ads_enabled') === 'true';
-    }
+    // Hide ads until AdSense approval - always return false for now
     return false;
   });
 

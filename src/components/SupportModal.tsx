@@ -55,24 +55,6 @@ export const SupportModal = ({ isOpen, onClose }: SupportModalProps) => {
 
         {/* Action buttons */}
         <div className="space-y-4">
-          {/* Enable Ads button */}
-          <div className="text-center">
-            <button
-              onClick={handleEnableAds}
-              className="w-full px-6 py-3 rounded-xl font-medium transition-all duration-200 mb-2 hover:scale-105"
-              style={{
-                backgroundColor: '#007AFF',
-                color: '#ffffff',
-                boxShadow: '0 4px 12px rgba(0, 122, 255, 0.3)'
-              }}
-            >
-              Enable Ads
-            </button>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Support Task Roulette with tasteful, non-intrusive banner ads that don't interfere with your practice.
-            </p>
-          </div>
-
           {/* Donate button */}
           <div className="text-center">
             <button
