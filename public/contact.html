@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Task Roulette</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 0.5rem 1rem;
+            background-color: #1c1c1e;
+            border: 1px solid #2c2c2e;
+            border-radius: 0.5rem;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .back-link:hover {
+            background-color: #2c2c2e;
+            transform: scale(1.02);
+        }
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .subtitle {
+            text-align: center;
+            color: #e0e0e0;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .contact-card {
+            background-color: #1c1c1e;
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid #2c2c2e;
+            text-align: center;
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        }
+        .contact-card:hover {
+            transform: translateY(-2px);
+        }
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .contact-title {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .contact-description {
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+        .contact-button {
+            background-color: #007AFF;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+        }
+        .contact-button:hover {
+            background-color: #005cbf;
+            color: #ffffff;
+            text-decoration: none;
+            transform: scale(1.05);
+        }
+        .contact-email {
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        .response-section {
+            border-top: 1px solid #444;
+            padding-top: 2rem;
+            text-align: center;
+        }
+        .response-title {
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .response-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .response-item {
+            text-align: center;
+        }
+        .response-time {
+            color: #e0e0e0;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .response-desc {
+            color: #888;
+            font-size: 0.85rem;
+        }
+        .note {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Task Roulette</a>
+
+        <h1>Contact Us</h1>
+        <p class="subtitle">We'd love to hear from you. Choose the option that best describes your needs.</p>
+
+        <div class="contact-options">
+            <!-- Report a Bug -->
+            <div class="contact-card">
+                <div class="contact-icon">🐛</div>
+                <div class="contact-title">Report a Bug</div>
+                <div class="contact-description">
+                    Found something that's not working correctly? Let us know so we can fix it quickly.
+                </div>
+                <a href="mailto:bugs@taskroulette.com" class="contact-button">Email Bug Report</a>
+                <div class="contact-email">bugs@taskroulette.com</div>
+            </div>
+
+            <!-- Suggest a Feature -->
+            <div class="contact-card">
+                <div class="contact-icon">💡</div>
+                <div class="contact-title">Suggest a Feature</div>
+                <div class="contact-description">
+                    Have an idea that could make Task Roulette better? We want to hear your suggestions.
+                </div>
+                <a href="mailto:features@taskroulette.com" class="contact-button">Submit Idea</a>
+                <div class="contact-email">features@taskroulette.com</div>
+            </div>
+        </div>
+
+        <div class="response-section">
+            <div class="response-title">Response Times</div>
+            <div class="response-grid">
+                <div class="response-item">
+                    <div class="response-time">Bug Reports</div>
+                    <div class="response-desc">Within 24 hours</div>
+                </div>
+                <div class="response-item">
+                    <div class="response-time">Feature Requests</div>
+                    <div class="response-desc">Within 1 week</div>
+                </div>
+            </div>
+
+            <p class="note">
+                When reporting issues, please include your browser type, device, and any error messages you see. This helps us resolve problems much faster.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
